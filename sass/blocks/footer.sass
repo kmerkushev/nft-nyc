@@ -1,0 +1,139 @@
+.footer
+    font-family: $gilroy
+    padding-bottom: 25px
+    border-top: 1px solid $divider
+
+    &__top
+        padding: 32px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border-bottom: 1px solid $divider
+
+    &__support
+        display: flex
+
+    &__social-list
+        @include reset-list
+        display: flex
+        align-items: center
+        gap: 16px
+        
+
+    &__social-item
+
+        &:last-of-type
+            margin-right: 0
+
+        & a:hover
+            @media #{$mouse-device}
+                opacity: 0.5
+                transition: all 0.3s ease
+
+    &__stores
+        display: flex
+
+    &__store
+        display: block
+        text-decoration: none
+        height: 43px
+
+        &:hover
+            @media #{$mouse-device}
+                opacity: 0.7
+                transition: all 0.3s ease
+
+        &--appstore
+            margin-right: 16px
+
+    &__middle
+        display: flex
+        padding: 28px 0
+        border-bottom: 1px solid $divider
+        justify-content: space-between
+
+        &-text
+            font-size: 14px
+            line-height: 18px
+            margin-right: 16px
+
+            &--link
+                color: $yellow
+                text-decoration: none
+                border-bottom: 1px solid $yellow
+
+                &:hover
+                    @media #{$mouse-device}
+                        border-bottom: 1px solid $black
+                        transition: all 0.3s ease
+
+                &:active
+                    border-bottom: 0px solid $black
+                    transition: all 0.3s ease
+
+    &__middle-social
+        @include reset-list
+        display: flex
+        align-items: center
+
+        &-item
+            margin-right: 16px
+            min-width: 24px
+
+            &:last-of-type
+                margin-right: 0
+        
+        & a:hover
+            @media #{$mouse-device}
+                opacity: 0.5
+                transition: all 0.3s ease
+
+        & a:active
+            @media #{$mouse-device}
+                opacity: 0.5
+                transition: all 0.3s ease
+
+    &__bottom
+        display: flex
+        justify-content: space-between
+        padding: 28px 0
+
+        &-address, &-company
+            color: $text-footer--pale
+            font-size: 12px
+            line-height: 16px
+            margin: 0
+
+@media (max-width: 790px)
+    .footer
+
+        &__top
+            flex-direction: column
+            align-items: flex-start
+            border: none
+            padding-bottom: 0
+
+        &__social
+            padding: 28px 0
+            border-top: 1px solid $divider
+            border-bottom: 1px solid $divider
+            width: 100%
+
+        &__social-list
+            flex-wrap: wrap
+            gap: 16px
+
+        &__stores
+            padding: 14px 0 0 0
+            border-bottom: none
+            width: 100%
+
+        &__middle
+            flex-direction: column
+            align-items: flex-start
+
+        &__bottom
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 8px

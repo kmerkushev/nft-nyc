@@ -1,0 +1,47 @@
+.cta
+    font-family: inherit
+
+    &__wrapper
+        display: flex
+        flex-direction: column
+        gap: $gap-width * 2
+
+    &__article
+        display: flex
+        align-items: center
+        gap: $gap-width * 2
+
+    &__text
+        font-size: 36px
+        line-height: 1.35
+        font-weight: 500
+        margin: 0
+
+    &__image
+        max-width: 100%
+        height: auto
+
+@media (max-width: $desktop-width)
+    .cta
+        &__text
+            font-size: 24px
+
+@media (max-width: 890px)
+    .cta
+        &__wrapper
+            gap: $gap-width * 2
+
+        &__article
+            flex-direction: column
+            gap: $gap-width
+        
+            &:nth-of-type(2n)
+                flex-direction: column-reverse
+
+        &__text
+            text-align: center
+
+@media (max-width: $mobile-width)
+    .cta
+        &__text
+            font-size: 18px

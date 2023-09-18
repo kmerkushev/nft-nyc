@@ -1,0 +1,25 @@
+.visually-hidden
+  position: absolute
+  clip: rect(0 0 0 0)
+  width: 1px
+  height: 1px
+  margin: -1px
+
+.text-highlight
+  color: $text--highlight
+  font-family: inherit
+  font-weight: 500
+
+.container
+  padding-right: $padding-container
+  padding-left: $padding-container
+
+@media (max-width: calc($width-padding-appear))
+  .container
+    padding-right: $padding-container
+    padding-left: $padding-container
+
+@media (max-width: $mobile-width)
+  .container
+    padding-right: $padding-container--mobile
+    padding-left: $padding-container--mobile

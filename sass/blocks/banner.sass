@@ -1,0 +1,212 @@
+.banner
+    position: relative
+    z-index: $ui-index-2
+    display: flex
+    flex-direction: column
+    gap: 24px
+    background: linear-gradient(263.89deg, #150C4B -100%, #523BA6 100%)
+    border-radius: 32px
+    font-family: inherit
+    padding: 40px 72px
+    box-sizing: border-box
+
+    &--telegram
+
+        &::after
+            content: ""
+            position: absolute
+            bottom: 0
+            right: 55px
+            width: 470px
+            height: 290px
+            z-index: $ui-index-0
+            background-image: url("../img/bg-telegram.svg")
+            background-repeat: no-repeat
+
+    &__top, &__bottom
+        display: flex
+        justify-content: space-between
+        gap: $gap-width * 2
+
+        &-left, &-right
+            width: 50%
+
+    &__bottom-right
+        display: flex
+        align-items: center
+        
+
+    &__left
+        display: flex
+        flex-direction: row
+        width: 50%
+        margin-right: 60px
+
+        &-footer
+            display: flex
+            flex-direction: column
+            margin-top: 28px
+
+    &__ego
+        position: relative
+        z-index: $ui-index-2
+        padding-right: 0
+
+    &__ego-image
+        display: inline-block
+            
+
+    &__h2 
+        font-size: 42px
+        line-height: 54px
+        font-weight: 500
+        margin: 0
+
+    &__caption
+        font-size: 16px
+        line-height: 1.25
+        font-weight: 400
+        margin: 0
+        margin-top: 10px
+
+    &__buttons
+        display: flex
+        gap: 30px
+        align-items: center
+
+    &__right
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__text, &__list
+        font-size: 24px
+        line-height: 1.35
+        margin: 0
+        font-weight: 500
+
+    &__text
+        line-height: 1.25
+
+    &__list
+        padding-left: 21px
+
+    &--telegram &__left
+        flex-direction: column
+        width: 60%
+        position: relative
+        z-index: 2
+
+        &-header
+            display: flex
+            flex-direction: column
+            gap: $gap-width
+
+    &--telegram &__text
+        max-width: 400px
+    
+
+@media (max-width: getGridWidth(12))
+    .banner
+        margin-left: 24px
+        margin-right: 24px
+
+@media (max-width: 960px)
+    .banner
+        padding: 40px 45px
+
+        &__top-right, &__bottom-right
+            width: 45%
+
+        &__h2
+            font-size: 36px
+            line-height: 1.25
+
+        &__ego::after
+            background-size: 96px
+
+        &__text, &__list
+            font-size: 21px
+
+@media (max-width: 850px)
+    .banner
+        padding: 35px 35px
+        max-width: 600px
+        box-sizing: border-box
+
+        &__top
+            flex-direction: column
+
+        &__top-left, &__top-right, &__bottom-left, &__bottom-right
+            width: 100%
+
+        &__top
+            gap: 28px
+
+        &__bottom
+            flex-direction: column
+            gap: 28px
+
+        &__text, &__list
+            font-size: 24px
+            line-height: 1.35
+
+        &__bottom &__text
+            font-size: 18px
+
+        &__caption
+            font-size: 18px
+            margin-top: 6px
+
+        &__text-br
+            display: none
+
+        &--telegram
+
+            &::after
+                display: none
+
+            & .banner__left
+                width: 100%
+
+        
+
+@media (max-width: $mobile-width)
+    .banner
+        padding: 30px
+
+        &__h2
+            font-size: 32px
+
+        &__buttons
+            flex-wrap: wrap
+            gap: $gap-width
+
+        
+        &__list, &__text
+            font-size: 21px
+
+        &__list
+            margin-top: 10px
+
+        &__caption
+            font-size: 16px
+
+        &__bottom &__text
+            font-size: 16px
+
+        &__br
+            display: none
+
+        &--telegram &__buttons
+            gap: 0
+
+        &--telegram &__button
+            max-width: 204px
+
+@media (max-width: 380px)
+    .banner
+        padding: 20px
+
+        &__h2
+            font-size: 30px

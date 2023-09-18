@@ -1,0 +1,76 @@
+@use '../vendor/functions'
+
+.steps
+    font-family: inherit
+    display: flex
+    flex-direction: column
+    gap: $margin--inner
+    align-items: center
+
+    &__h2
+        text-align: center
+        font-size: $h2
+        line-height: 1.25
+        font-weight: 500
+        margin: 0
+        margin-bottom: $margin--inner
+
+    &__wrapper
+        display: flex
+        flex-direction: column
+        gap: $margin--inner
+
+    &__step
+        display: flex
+        justify-content: space-between
+        align-items: center
+        gap: $gap-width
+
+        &-image
+            max-width: getGridWidth(4)
+
+        &-text
+            font-size: 24px
+            line-height: 1.25
+            text-align: left
+            font-weight: 500
+            max-width: getGridWidth(4)
+            margin: 0
+
+@media (max-width: $desktop-width)
+    .steps
+    
+        &__h2
+            font-size: $h2--tablet
+
+        &__h3
+            font-size: $h3--tablet
+            max-width: getGridWidth(8)
+
+@media (max-width: 600px)
+    .steps
+        gap: calc($gap-width / 2)
+
+        &__wrapper
+            gap: $gap-width * 2
+
+        &__step
+            flex-direction: column
+
+            &-text
+                text-align: center
+
+        &__step:nth-of-type(2n)
+            flex-direction: column-reverse
+
+            & .steps__step-text
+                margin-top: $gap-width
+
+@media (max-width: $mobile-width)
+    .steps
+    
+        &__h2
+            font-size: $h2--mobile
+
+        &__step-text
+            font-size: $p--mobile

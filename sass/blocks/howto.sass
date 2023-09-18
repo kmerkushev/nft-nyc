@@ -1,0 +1,150 @@
+@use '../vendor/functions'
+
+.howto
+    font-family: inherit
+    color: $text
+
+    &__h2
+        font-family: Gilroy
+        font-size: $h2
+        font-weight: 500
+        line-height: 1.25
+        text-align: center
+        max-width: getGridWidth(9)
+        margin: 0 auto
+
+    &__list        
+        @include reset-list
+        margin-top: $margin--inner
+        display: flex
+        justify-content: space-between
+        gap: $gap-width
+        grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto
+
+    &__item
+        position: relative
+        z-index: $ui-index-2
+        background-color: $card-background
+        border-radius: 15px
+        padding: 30px 30px 50px 30px
+        display: flex
+        flex-direction: column
+        gap: 30px
+        height: 100%
+        box-sizing: border-box
+
+        &--1
+            width: 100%
+            max-width: getGridWidth(5)
+            flex-grow: 5
+            grid-column-start: 1
+            grid-column-end: 6
+
+        &--2
+            width: 100%
+            max-width: getGridWidth(3)
+            flex-grow: 3
+            grid-column-start: 6
+            grid-column-end: 9
+
+        &--3
+            flex-grow: 4
+            grid-column-start: 9
+            grid-column-end: 12
+
+        &::before
+            content: " "
+            position: absolute
+            z-index: $ui-index-3
+            width: 25px
+            height: 25px
+            top: 30px
+            right: 30px
+            background-color: $black
+            border-radius: 50%
+
+    &__number
+        font-size: $card-number
+        margin: 0
+
+    &__text-heading
+        font-size: $card-heading
+        font-weight: 500
+        color: $text
+        margin: 0
+
+    &__link
+        text-decoration: none
+        color: $text--highlight
+        border-bottom: 1px solid $text--highlight
+
+        &:hover
+            @media #{$mouse-device}
+                border-bottom: 1px solid $card-background
+                transition: all 0.3s ease
+
+    &__text
+        margin: 0
+
+    &__cta
+        display: flex
+        align-items: center
+        gap: 18px    
+
+    &__caption
+        font-weight: 400
+        font-size: 15px
+        margin: 0
+        max-width: 220px
+
+@media (max-width: $desktop-width)
+    .howto
+        &__h2
+            font-size: $h2--tablet
+            max-width: getGridWidth(8)
+
+        &__h3
+            font-size: $h3--tablet
+            max-width: getGridWidth(8)
+
+@media (max-width: 1024px)
+    .howto
+
+        &__cta
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+
+
+@media (max-width: 700px)
+    .howto
+
+        &__list
+            flex-direction: column
+            max-width: getGridWidth(5)
+            margin-left: auto
+            margin-right: auto
+
+        &__item--2
+            max-width: getGridWidth(5)
+
+        &__item--3
+            max-width: getGridWidth(5)
+
+        &__cta
+            flex-direction: row
+            align-items: center
+
+@media (max-width: $mobile-width)
+    .howto    
+        &__h2
+            font-size: $h2--mobile
+
+@media (max-width: 390px)
+    .howto
+        &__cta
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+
+            

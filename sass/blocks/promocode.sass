@@ -1,0 +1,58 @@
+.promocode
+    position: relative
+    z-index: $ui-index-2
+    font-family: inherit
+    display: flex
+    align-items: center
+    gap: 12px
+    border: 2px dashed $white
+    border-radius: 6px
+    padding: 12px
+    box-sizing: border-box
+    height: 50px
+
+    &::before
+        content: "PROMOCODE"
+        color: $text
+        position: absolute
+        z-index: $ui-index-2
+        top: -7px
+        left: 44px
+        padding: 0px 5px
+        background-color: #4A359A
+        font-size: 11px
+        letter-spacing: 2px
+
+    &__text-content
+        font-size: 18px
+        font-weight: 500
+        letter-spacing: 2px
+        margin: 0
+
+    &__copy-button
+        position: relative
+        z-index: $ui-index-2
+        background-color: transparent
+        background-image: url("../img/icon-copy-to-clipboard.svg")
+        background-repeat: no-repeat
+        width: 27px
+        height: 31px
+        border: none
+        
+        &:hover
+            @media #{$mouse-device}
+                opacity: 0.8
+                transition: all 0.3s ease
+
+        &:active
+            opacity: 0.8
+            transform: translate(0px, 3px)
+            transition: all 0.2s ease
+
+    &__button-indicator
+        font-size: 10px
+        color: $text
+        position: absolute
+        bottom: -27px
+        right: 7px
+        z-index: 2

@@ -1,0 +1,110 @@
+@use '../vendor/functions'
+
+// colors
+$white: #ffffff
+$white--transparent: rgba(255, 255, 255, 0.1)
+$black: #0A0A1E
+$neutral: #31324F
+$blue-gray: #b0b0c4
+$violet: #6E46F0
+$purple: #BA46F0
+$yellow: #FFD80A
+$yellow--dark: #E8B500
+$yellow--pale: #FFE55F
+$accent: #FFE55F
+
+$telegram: #0088CC
+$linkedin: #0077B7
+$tiktok: #000000
+$tiktok--accent-1: #23E9E4
+$tiktok--accent-2: #F12A51
+$discord: #5865F2
+$medium: #FFC017
+$facebook: #4867AA
+$instagram: linear-gradient(84.7deg, #F69B03 4.08%, #C811B8 96.4%)
+$youtube: #EB3223
+$twitter: #1D9BF9
+
+$text: $white
+$text--highlight: $yellow--pale
+$text-accent: $yellow
+$text-pale: #8B8CA8
+$text-button: $black
+$text-footer--pale: #616283
+
+$button: $yellow--pale
+$button--hover: $yellow--dark
+$button--active: $yellow--dark
+
+$divider: #24253D
+
+$scrollbar-track: $black
+$scrollbar-thumb: #414463
+$scrollbar-thumb--hover: $black
+
+$button-background: $yellow--pale
+
+$card-background: #1C1D32
+
+
+// fonts
+$gilroy: "Gilroy", "Arial", sans-serif
+
+// font-sizes
+$h1: 64px
+$h2--howto: 32px
+$h2: 42px
+$h3: 36px
+$p: 24px
+
+$h1--tablet: 48px
+$h2--tablet: 36px
+$h3--tablet: 28px
+$p--tablet: 18px
+
+$h1--mobile: 42px
+$h2--mobile: 24px
+$h3--mobile: 18px
+$p--mobile: 18px
+
+$card-number: 64px
+$card-biggest: 36px
+$card-heading: 24px
+$card-text: 16px
+
+// viewports
+$tablet-width: 768px
+$desktop-width: 1200px
+$mobile-width-only: 767px
+$mobile-width: 480px
+$mobile-width--small: 320px
+
+// grid
+$grid-step: 6px
+$num-col: 12
+$col-width: calc($grid-step * $num-col)
+$gap-width: calc($grid-step * 4)
+$min-block-margin: $grid-step * 5
+
+$max-width-container: getGridWidth(12)
+
+$padding-container: 24px
+$padding-container--mobile: 16px
+
+$margin--inner: $min-block-margin
+$margin-article--outer: 60px
+
+$width-article--headings: 744px
+$width-article--text: 522px
+
+$width-padding-appear: calc($max-width-container + $padding-container * 2)
+
+$ui-index-0: 0 
+$ui-index-1: 1 // Для наползающих элементов в общем потоке  
+$ui-index-2: 2 // Для наползающих элементов в общем потоке
+$ui-index-3: 3 // Для масок
+$ui-index-4: 4 // Для сайдбаров
+$ui-index-5: 5 // Для модалок
+$ui-index-6: 6 // Для элементов, перекрывающих всё
+
+$mouse-device: '(hover: hover) and (pointer: fine)'

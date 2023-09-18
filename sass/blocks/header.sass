@@ -1,0 +1,170 @@
+.header
+    display: flex
+    flex-direction: row
+    justify-content: center
+    z-index: 2
+    position: relative
+
+    &__left
+        display: flex
+        flex-direction: row
+        align-items: center
+        flex-wrap: wrap
+        gap: 32px
+
+    &__right
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 24px
+
+    &__logo
+        &:hover 
+            @media #{$mouse-device}
+                opacity: 0.8
+                transition: all 0.2s ease
+
+        &:active
+            opacity: 0.8
+            transform: translate(0px, 3px)
+            transition: all 0.2s ease
+
+    &__paysenger:hover
+        @media #{$mouse-device}
+            opacity: 0.8
+            transition: all 0.3s ease
+
+    &__partners
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 12px
+
+    &__partner
+        height: 43px
+        padding: 9px
+        border-radius: 10px
+        display: flex
+        flex-direction: row
+        align-items: center
+        background-color: $white--transparent
+        box-sizing: border-box
+
+        &-img
+            margin-right: 9px
+
+    &__partner-text
+        font-family: $gilroy
+        font-size: 14px
+        font-weight: 500
+        color: $text
+        margin: 0
+        margin-top: -4px
+
+    &__partner-caption
+        font-size: 9px
+        font-weight: 500
+        color: $text
+
+    &__min-age
+        color: $text
+        padding: 10px 20px
+        font-size: 21px
+        font-weight: 500
+        background-color: $white--transparent
+        border-radius: 10px
+        margin: 0
+
+    &__terms
+        color: $text
+        text-decoration: none
+        padding: 10px 20px
+        padding-top: 12px
+        font-size: 14px
+        line-height: 1.25
+        font-weight: 400
+        background-color: $white--transparent
+        border-radius: 10px
+        margin: 0
+        box-sizing: border-box
+        border: 2px solid rgba(255, 255, 255, 0.1)
+
+        &:hover 
+            @media #{$mouse-device}
+                border: 2px solid $yellow
+                transition: all 0.2s ease
+
+        &:active
+            background-color: $yellow
+            border: 2px solid $yellow
+            color: $neutral
+            transform: translate(0px, 3px)
+            transition: all 0.2s ease
+
+@media (max-width: 700px)
+.header
+    flex-direction: column
+    gap: 24px
+
+    &__logo-image
+        max-width: 180px
+
+    &__left
+        flex-direction: column
+        align-items: flex-start
+        gap: 21px
+        justify-content: center
+        flex-direction: row
+        align-items: center
+
+    &__right
+        // flex-direction: column
+
+    &__logo-image
+        max-width: 180px
+
+    &__min-age
+        padding: 10px
+        // font-size: 14px
+        display: inline-block
+
+    &__paysenger-link
+        line-height: 0
+
+@media (max-width: $mobile-width)
+.header
+    align-items: center
+
+.header__right
+    gap: 12px
+    justify-content: center
+
+.header__partners
+    justify-content: center
+    align-items: center
+    width: 100%
+
+
+@media (max-width: 370px)
+.header
+
+    &__partners
+        gap: 6px
+
+    &__partner
+        padding: 8px
+
+        &-text
+            font-size: 12px
+
+        &-caption
+            font-size: 8px
+            
+        &-img
+            margin-right: 6px
+
+    &__min-age
+        font-size: 18px
+
+        

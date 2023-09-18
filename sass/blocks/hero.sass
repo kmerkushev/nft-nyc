@@ -1,0 +1,133 @@
+@use '../vendor/functions'
+
+.hero
+    position: relative
+    z-index: $ui-index-2
+    font-family: inherit
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+    background-image: url("../img/bg-hero.png")
+    background-position-x: center
+    background-position-y: 50px
+    background-repeat: no-repeat
+    background-size: 2330px
+
+    &__headings
+        margin-top: 30px
+        width: 100%
+        display: flex
+        flex-direction: column        
+        align-items: center
+        padding-top: 145px
+        padding-bottom: 90px
+        background-image: url("../img/bg-main-text.svg")
+        background-repeat: no-repeat
+        background-position-x: center
+        background-position-y: 60px
+
+    &__h1
+        margin: 0
+        z-index: $ui-index-2
+        text-align: center
+        font-size: 64px
+        font-weight: 500
+        line-height: 1.25
+
+
+    &__h2
+        margin: 0
+        z-index: $ui-index-2
+        margin-top: 12px
+        text-align: center
+        font-size: $h2
+        font-weight: 500
+        line-height: 1.25
+        max-width: getGridWidth(6)
+
+    &__scroll-to-learn-more
+        color: $text-pale
+        min-width: 150px
+        position: relative
+        z-index: $ui-index-2
+        font-size: 16px
+        line-height: 1.25
+        font-weight: 400
+        padding-left: 28px
+        margin-top: 120px
+        margin-bottom: 0
+
+        &::before
+            content: ""
+            position: absolute
+            top: -5px
+            left: 0
+            width: 16px
+            height: 28px
+            background-image: url("../img/icon-scroll.svg")
+            background-repeat: no-repeat
+
+@media (max-width: 960px)
+    .hero
+        background-size: 1680px
+        background-position-y: 0
+
+        &__headings
+            background-size: 520px
+            background-position-y: 20px
+            padding-top: 80px
+
+        &__h1
+            font-size: $h1--tablet
+
+        &__h2
+            font-size: 28px
+            max-width: getGridWidth(4)
+
+        &__scroll-to-learn-more
+            margin-top: 90px
+
+
+@media (max-width: 700px)
+    .hero
+        background-size: 568px 298px
+        background-image: url("../img/bg-hero--mobile.png.png")
+
+        &__headings
+            background-image: none
+            position: relative
+            z-index: $ui-index-2
+            padding-top: 0
+            margin-top: 10px
+
+        &__h1, &__h2
+            max-width: 260px
+
+        &__h1
+            font-size: $h1--mobile
+
+        &__h2
+            font-size: $h2--mobile
+            max-width: 230px
+
+        &__scroll-to-learn-more
+            min-width: 150px
+            position: relative
+            z-index: $ui-index-2
+            font-size: 14px
+            line-height: 1.25
+            font-weight: 400
+            padding-left: 24px
+            margin-top: 24px
+            margin-bottom: 0
+
+            &::before
+                content: ""
+                position: absolute
+                top: -5px
+                left: 0
+                width: 16px
+                height: 28px
+                background-image: url("../img/icon-scroll.svg")
+                background-repeat: no-repeat

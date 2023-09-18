@@ -1,0 +1,6 @@
+@function getGridWidth($numberOfColumns)
+
+  @return ($numberOfColumns - 1) * $gap-width + $numberOfColumns * $col-width
+
+@function getBlockMargin($numberOfSteps)
+  @return $numberOfSteps * $min-block-margin

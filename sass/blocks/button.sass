@@ -1,0 +1,30 @@
+.button
+    color: $text-button
+    background-color: $button-background
+    text-decoration: none
+    font-weight: 500
+    font-size: 26px
+    padding: 16px 32px
+    border-radius: 30px
+    height: 60px
+    display: inline-flex
+    flex-shrink: 0
+    align-items: center
+    box-sizing: border-box
+
+    &--small-text
+        font-size: 16px
+        line-height: 1.25
+        font-weight: 500
+
+
+    &:hover
+        @media #{$mouse-device}
+            background-color: $button--hover
+            transition: all 0.3s ease
+
+    &:active
+        background-color: $button--active
+        transform: translate(0px, 3px)
+        transition: all 0.2s ease
+        
